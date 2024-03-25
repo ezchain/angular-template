@@ -1,0 +1,216 @@
+<header>
+  <div>
+    <a>Inicio</a>
+  </div>
+  <div class="header-links">
+    <a> About </a>
+    <a> Services </a>
+    <a> Work </a>
+    <a> Testimonials </a>
+    <a> Contact </a>
+    <button class="black-button">
+      Download<span class="material-symbols-outlined"> download </span>
+    </button>
+  </div>
+</header>
+<main>
+  <section class="first-page">
+    <div class="first-page-text-container">
+      <p>{{pageAlt}}</p>
+      <h1 class="section-title">
+        {{pageTitle}}
+      </h1>
+      <p class="section-desc desc">
+        {{pageDesc}}
+      </p>
+      <div class="buttons-container">
+        <button class="black-button">
+          My Story
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+        <button class="white-button">
+          See Work
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+    </div>
+    <div class="first-page-image-container"><img /></div>
+  </section>
+  <section class="second-page">
+    <div class="flex-space-between">
+      <div>
+        <h1 class="section-title">{{secondSectionTitle}}</h1>
+        <p class="section-desc">
+          {{secondSectionDesc}}
+        </p>
+      </div>
+      <button class="black-button">
+        Get Started
+        <span class="material-symbols-outlined"> arrow_right_alt </span>
+      </button>
+    </div>
+    <div class="second-page-container">
+      <div class="second-page-taps-container">
+        <div class="second-page-tap second-page-tap-selected">
+          <div class="flex">
+            <p>Web Design</p>
+          </div>
+          <p class="desc">Create Your Next Amazing Website Today with Me</p>
+        </div>
+        <div class="second-page-tap">
+          <div class="flex">
+            <p>Web Design</p>
+          </div>
+        </div>
+        <div class="second-page-tap">
+          <div class="flex">
+            <p>Web Design</p>
+          </div>
+        </div>
+      </div>
+      <img />
+    </div>
+  </section>
+  <section class="third-page">
+    <h1 class="section-title">{{thirdSectionTitle}}</h1>
+    <p class="section-desc">
+      {{thirdSectionDesc}}
+    </p>
+    <div class="third-page-card-container">
+      <div class="third-page-card">
+        <img />
+        <h1 class="third-page-card-title">Event WebSite</h1>
+        <p class="third-page-card-desc">
+          A platform to promote and manage events with features like ticket
+          sales etc.
+        </p>
+        <button class="black-button">
+          View Project
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+      <div class="third-page-card">
+        <img />
+        <h1 class="third-page-card-title">Event WebSite</h1>
+        <p class="third-page-card-desc">
+          A platform to promote and manage events with features like ticket
+          sales etc.
+        </p>
+        <button class="black-button">
+          View Project
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+      <div class="third-page-card">
+        <img />
+        <h1 class="third-page-card-title">Event WebSite</h1>
+        <p class="third-page-card-desc">
+          A platform to promote and manage events with features like ticket
+          sales etc.
+        </p>
+        <button class="black-button">
+          View Project
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+      <div class="third-page-card">
+        <img />
+        <h1 class="third-page-card-title">Event WebSite</h1>
+        <p class="third-page-card-desc">
+          A platform to promote and manage events with features like ticket
+          sales etc.
+        </p>
+        <button class="black-button">
+          View Project
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+      <div class="third-page-card">
+        <img />
+        <h1 class="third-page-card-title">Event WebSite</h1>
+        <p class="third-page-card-desc">
+          A platform to promote and manage events with features like ticket
+          sales etc.
+        </p>
+        <button class="black-button">
+          View Project
+          <span class="material-symbols-outlined"> arrow_right_alt </span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="fourth-page">
+    <div class="flex-space-between">
+      <div>
+        <h1 class="section-title">{{fourthSectionTitle}}</h1>
+        <p class="section-desc">
+         {{fourthSectionDesc}}
+        </p>
+      </div>
+      <button class="black-button">
+        View More<span class="material-symbols-outlined">
+          arrow_right_alt
+        </span>
+      </button>
+    </div>
+    <div class="fourth-page-cards-container">
+      <div class="fourth-page-card" *ngFor="let i of getCarouselItems()">
+        <img />
+        <h2>{{ i.name }}</h2>
+        <p class="fourth-page-card-subtitle">{{ i.subtitle }}</p>
+        <p class="fourth-page-card-desc">
+          {{ i.desc }}
+        </p>
+        <div class="fourth-page-card-desc-stars">
+          <span class="material-symbols-outlined"> star </span
+          ><span class="material-symbols-outlined"> star </span
+          ><span class="material-symbols-outlined"> star </span
+          ><span class="material-symbols-outlined"> star </span
+          ><span class="material-symbols-outlined"> star </span>
+        </div>
+      </div>
+      <div class="fourth-page-next-button">
+        <span class="material-symbols-outlined"> navigate_next </span>
+      </div>
+    </div>
+  </section>
+  <section class="contact-page">
+    <div class="contact-page-row">
+      <div class="contact-page-image-container">
+        <img />
+      </div>
+      <div class="contact-page-info-container">
+        <h1 class="section-title">Work With Me!</h1>
+        <p class="section-desc">
+          Let's Connect and Discuss your WebDesign Project Today!
+        </p>
+        <div class="contact-page-icons-container">
+          <div class="contact-page-icon"></div>
+          <div class="contact-page-icon"></div>
+          <div class="contact-page-icon"></div>
+          <div class="contact-page-icon"></div>
+        </div>
+        <div class="contact-page-inputs-container">
+          <input />
+          <input />
+        </div>
+        <textarea></textarea>
+        <button class="black-button">Send Message</button>
+      </div>
+    </div>
+    <div class="contact-page-info">
+      <div>
+        <h2>Or Email At</h2>
+        <h1>helloframerit.com</h1>
+      </div>
+      <div>
+        <h2>Or Call Me At</h2>
+        <h1>+1 234 556 7</h1>
+      </div>
+      <div>
+        <h2>Or Let's Hang Out!</h2>
+        <h1>153 Williamson Plaza, 09514</h1>
+      </div>
+    </div>
+  </section>
+</main>
