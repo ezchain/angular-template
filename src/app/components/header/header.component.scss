@@ -1,0 +1,60 @@
+p,h1,h2,h3,h4,a,div,button,input::placeholder{
+    font-family: "Space Grotesk", sans-serif !important; 
+  }
+  
+  header {
+    background: #ffffff;
+    position:fixed;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 900;
+    a {
+      margin-left: 15px;
+    }
+  }
+
+  .black-button {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 136px;
+    height: 44px;
+    font-size: 15px;
+    border: 0;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header__links {
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 14px;
+      color: #000000;
+      margin-right: 35px;
+    }
+  }
+  
+  .header__sidebar-button{
+    display:none;
+  }
+
+  @media (max-width: 500px) {
+    .header__links {
+        display: none;
+      }
+  
+    .header__sidebar-button{
+      display: block;
+      margin-right: 15px;
+    }
+
+
+
+}

@@ -1,27 +1,13 @@
-<header>
-  <div>
-    <a>Inicio</a>
-  </div>
-  <div class="header-links">
-    <a> About </a>
-    <a> Services </a>
-    <a> Work </a>
-    <a> Testimonials </a>
-    <a> Contact </a>
-    <button class="black-button">
-      Download<span class="material-symbols-outlined"> download </span>
-    </button>
-  </div>
-</header>
+<app-header></app-header>
 <main>
   <section class="first-page">
-    <div class="first-page-text-container">
-      <p>{{pageAlt}}</p>
-      <h1 class="section-title">
-        {{pageTitle}}
+    <div class="first-page__text-container">
+      <p>{{ pageAlt }}</p>
+      <h1 class="section__title">
+        {{ pageTitle }}
       </h1>
-      <p class="section-desc desc">
-        {{pageDesc}}
+      <p class="section__desc desc">
+        {{ pageDesc }}
       </p>
       <div class="buttons-container">
         <button class="black-button">
@@ -34,14 +20,14 @@
         </button>
       </div>
     </div>
-    <div class="first-page-image-container"><img /></div>
+    <div class="first-page__image-container"><img /></div>
   </section>
   <section class="second-page">
     <div class="flex-space-between">
       <div>
-        <h1 class="section-title">{{secondSectionTitle}}</h1>
-        <p class="section-desc">
-          {{secondSectionDesc}}
+        <h1 class="section__title">{{ secondSectionTitle }}</h1>
+        <p class="section__desc">
+          {{ secondSectionDesc }}
         </p>
       </div>
       <button class="black-button">
@@ -49,90 +35,89 @@
         <span class="material-symbols-outlined"> arrow_right_alt </span>
       </button>
     </div>
-    <div class="second-page-container">
-      <div class="second-page-taps-container">
-        <div class="second-page-tap second-page-tap-selected">
-          <div class="flex">
-            <p>Web Design</p>
+    <div class="second-page__container">
+      <div class="second-page__taps-container">
+        <div
+        class="second-page__tap"
+          *ngFor="let i of myServicesElements"
+          (click)="selectService(i.name)"
+          [ngClass]="{ 'second-page__tap--selected': i.selected }"
+          >
+          <div class="flex-center">
+            <span class="material-symbols-outlined">{{i.icon}} </span>
+            <h4>{{i.name}}</h4>
           </div>
-          <p class="desc">Create Your Next Amazing Website Today with Me</p>
-        </div>
-        <div class="second-page-tap">
-          <div class="flex">
-            <p>Web Design</p>
-          </div>
-        </div>
-        <div class="second-page-tap">
-          <div class="flex">
-            <p>Web Design</p>
-          </div>
+          <p class="desc" *ngIf="i.selected">
+          
+            {{i.desc}}
+          </p>
         </div>
       </div>
       <img />
     </div>
   </section>
   <section class="third-page">
-    <h1 class="section-title">{{thirdSectionTitle}}</h1>
-    <p class="section-desc">
-      {{thirdSectionDesc}}
+    <h1 class="section__title">{{ thirdSectionTitle }}</h1>
+    <p class="section__desc">
+      {{ thirdSectionDesc }}
     </p>
-    <div class="third-page-card-container">
-      <div class="third-page-card">
+    <div class="third-page__card-container">
+      <div class="third-page__card">
         <img />
-        <h1 class="third-page-card-title">Event WebSite</h1>
-        <p class="third-page-card-desc">
+        <h1 class="third-page__card-title">Event WebSite</h1>
+        <p class="third-page__card-desc">
           A platform to promote and manage events with features like ticket
           sales etc.
         </p>
-        <button class="black-button">
+        <button class="black-button" (click)="goToProjects()">
           View Project
           <span class="material-symbols-outlined"> arrow_right_alt </span>
         </button>
       </div>
-      <div class="third-page-card">
+      <div class="third-page__card">
         <img />
-        <h1 class="third-page-card-title">Event WebSite</h1>
-        <p class="third-page-card-desc">
+        <h1 class="third-page__card-title">Event WebSite</h1>
+        <p class="third-page__card-desc">
           A platform to promote and manage events with features like ticket
           sales etc.
         </p>
-        <button class="black-button">
+        <button class="black-button" (click)="goToProjects()">
           View Project
           <span class="material-symbols-outlined"> arrow_right_alt </span>
         </button>
       </div>
-      <div class="third-page-card">
+      <div class="third-page__card">
         <img />
-        <h1 class="third-page-card-title">Event WebSite</h1>
-        <p class="third-page-card-desc">
+        <h1 class="third-page__card-title">Event WebSite</h1>
+        <p class="third-page__card-desc">
           A platform to promote and manage events with features like ticket
           sales etc.
         </p>
-        <button class="black-button">
+        <button class="black-button" (click)="goToProjects()">
           View Project
           <span class="material-symbols-outlined"> arrow_right_alt </span>
         </button>
       </div>
-      <div class="third-page-card">
+      <div class="third-page__card">
         <img />
-        <h1 class="third-page-card-title">Event WebSite</h1>
-        <p class="third-page-card-desc">
+        <h1 class="third-page__card-title">Event WebSite</h1>
+        <p class="third-page__card-desc">
           A platform to promote and manage events with features like ticket
           sales etc.
         </p>
-        <button class="black-button">
+        <button class="black-button" (click)="goToProjects()">
           View Project
           <span class="material-symbols-outlined"> arrow_right_alt </span>
         </button>
       </div>
-      <div class="third-page-card">
+      <div class="third-page__card">
         <img />
-        <h1 class="third-page-card-title">Event WebSite</h1>
-        <p class="third-page-card-desc">
+        <h1 class="third-page__card-title">Event WebSite</h1>
+        <p class="third-page__card-desc">
           A platform to promote and manage events with features like ticket
           sales etc.
         </p>
-        <button class="black-button">
+        <button class="black-button" (click)="goToProjects()">
           View Project
           <span class="material-symbols-outlined"> arrow_right_alt </span>
         </button>
@@ -142,9 +127,9 @@
   <section class="fourth-page">
     <div class="flex-space-between">
       <div>
-        <h1 class="section-title">{{fourthSectionTitle}}</h1>
-        <p class="section-desc">
-         {{fourthSectionDesc}}
+        <h1 class="section__title">{{ fourthSectionTitle }}</h1>
+        <p class="section__desc">
+          {{ fourthSectionDesc }}
         </p>
       </div>
       <button class="black-button">
@@ -153,15 +138,15 @@
         </span>
       </button>
     </div>
-    <div class="fourth-page-cards-container">
-      <div class="fourth-page-card" *ngFor="let i of getCarouselItems()">
+    <div class="fourth-page__cards-container">
+      <div class="fourth-page__card" *ngFor="let i of getCarouselItems()">
         <img />
         <h2>{{ i.name }}</h2>
-        <p class="fourth-page-card-subtitle">{{ i.subtitle }}</p>
-        <p class="fourth-page-card-desc">
+        <p class="fourth-page__card-subtitle">{{ i.subtitle }}</p>
+        <p class="fourth-page__card-desc">
           {{ i.desc }}
         </p>
-        <div class="fourth-page-card-desc-stars">
+        <div class="fourth-page__card-desc-stars">
           <span class="material-symbols-outlined"> star </span
           ><span class="material-symbols-outlined"> star </span
           ><span class="material-symbols-outlined"> star </span
@@ -169,36 +154,85 @@
           ><span class="material-symbols-outlined"> star </span>
         </div>
       </div>
-      <div class="fourth-page-next-button">
+      <div class="fourth-page__next-button">
         <span class="material-symbols-outlined"> navigate_next </span>
       </div>
     </div>
   </section>
   <section class="contact-page">
-    <div class="contact-page-row">
-      <div class="contact-page-image-container">
+    <div class="contact-page__row">
+      <div class="contact-page__image-container">
         <img />
       </div>
-      <div class="contact-page-info-container">
-        <h1 class="section-title">Work With Me!</h1>
-        <p class="section-desc">
+      <form class="contact-page__info-container" (ngSubmit)="onSubmit()">
+        <h1 class="section__title">Work With Me!</h1>
+        <p class="section__desc">
           Let's Connect and Discuss your WebDesign Project Today!
         </p>
-        <div class="contact-page-icons-container">
-          <div class="contact-page-icon"></div>
-          <div class="contact-page-icon"></div>
-          <div class="contact-page-icon"></div>
-          <div class="contact-page-icon"></div>
+        <div class="contact-page__icons-container">
+          <a class="contact-page__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16.292"
+              height="13.417"
+            >
+              <path
+                d="M 16.292 0.008 C 15.583 0.513 14.797 0.899 13.966 1.152 C 13.053 0.091 11.581 -0.281 10.28 0.22 C 8.98 0.722 8.127 1.989 8.146 3.395 L 8.146 4.142 C 5.503 4.212 3.001 2.94 1.481 0.755 C 1.481 0.755 -1.481 7.485 5.184 10.475 C 3.659 11.521 1.842 12.045 0 11.971 C 3.332 13.84 7.035 13.84 9.905 12.298 C 12.774 10.756 14.811 7.672 14.811 3.372 C 14.81 3.164 14.79 2.956 14.751 2.752 C 15.507 1.999 16.04 1.049 16.292 0.008 Z"
+                fill="#666666"
+              ></path>
+            </svg>
+          </a>
+          <a class="contact-page__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14.667"
+              height="14.667"
+            >
+              <path
+                d="M 8.479 14.667 L 8.479 9.511 L 10.188 9.511 L 10.513 7.378 L 10.513 7.378 L 10.513 7.378 L 8.479 7.378 L 8.479 5.994 C 8.479 5.41 8.764 4.841 9.674 4.841 L 10.599 4.841 L 10.599 3.025 C 10.599 3.025 10.599 3.025 10.599 3.025 C 10.599 3.025 9.76 2.881 8.958 2.881 C 7.283 2.881 6.188 3.902 6.188 5.752 L 6.188 7.378 L 4.325 7.378 L 4.325 9.511 L 4.325 9.511 L 6.188 9.511 L 6.188 14.667 C 2.681 14.113 0 11.06 0 7.378 C 0 3.304 3.284 0 7.333 0 C 11.383 0 14.667 3.304 14.667 7.378 C 14.667 11.061 11.985 14.114 8.479 14.667 Z"
+                fill="#666666"
+              ></path>
+            </svg>
+          </a>
+          <a class="contact-page__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14.667"
+              height="14.667"
+            >
+              <path
+                d="M 0 4.278 C 0 1.915 1.915 0 4.278 0 L 10.389 0 C 12.751 0 14.667 1.915 14.667 4.278 L 14.667 10.389 C 14.667 12.751 12.751 14.667 10.389 14.667 L 4.278 14.667 C 1.915 14.667 0 12.751 0 10.389 Z M 10.389 3.056 C 10.379 3.499 10.609 3.912 10.992 4.137 C 11.374 4.361 11.847 4.362 12.23 4.137 C 12.612 3.913 12.843 3.499 12.833 3.056 C 12.818 2.392 12.275 1.861 11.611 1.861 C 10.947 1.861 10.404 2.391 10.389 3.056 Z M 4.278 7.333 C 4.278 9.021 5.646 10.389 7.334 10.389 C 9.022 10.389 10.39 9.02 10.389 7.333 C 10.389 5.645 9.021 4.277 7.333 4.277 C 5.646 4.277 4.278 5.646 4.278 7.333 Z"
+                fill="#666666"
+              ></path>
+            </svg>
+          </a>
+          <a class="contact-page__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14.875" height="14">
+              <path
+                d="M 3.377 14 L 3.377 4.554 L 0.189 4.554 L 0.189 14 L 3.377 14 Z M 1.783 3.264 C 2.895 3.264 3.587 2.539 3.587 1.632 C 3.566 0.705 2.895 0 1.804 0 C 0.713 0 0 0.705 0 1.632 C 0 2.539 0.692 3.264 1.762 3.264 L 1.783 3.264 Z M 5.142 14 L 8.33 14 L 8.33 8.725 C 8.33 8.443 8.351 8.161 8.435 7.959 C 8.666 7.395 9.19 6.811 10.071 6.811 C 11.225 6.811 11.687 7.677 11.687 8.947 L 11.687 14 L 14.875 14 L 14.875 8.584 C 14.875 5.682 13.302 4.332 11.204 4.332 C 9.484 4.332 8.729 5.279 8.309 5.923 L 8.33 5.923 L 8.33 4.554 L 5.142 4.554 C 5.183 5.44 5.142 14 5.142 14 Z"
+                fill="#666666"
+              ></path>
+            </svg>
+          </a>
         </div>
-        <div class="contact-page-inputs-container">
-          <input />
-          <input />
+        <div class="contact-page__inputs-container">
+          <input placeholder="Name" name="name" [(ngModel)]="formData.name" />
+          <input
+            placeholder="Email"
+            name="email"
+            type="email"
+            [(ngModel)]="formData.email"
+          />
         </div>
-        <textarea></textarea>
-        <button class="black-button">Send Message</button>
-      </div>
+        <textarea
+          placeholder="Message"
+          name="message"
+          [(ngModel)]="formData.message"
+        ></textarea>
+        <button type="submit" class="black-button">Send Message</button>
+      </form>
     </div>
-    <div class="contact-page-info">
+    <div class="contact-page__info">
       <div>
         <h2>Or Email At</h2>
         <h1>helloframerit.com</h1>
