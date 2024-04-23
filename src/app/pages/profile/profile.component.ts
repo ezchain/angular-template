@@ -87,8 +87,8 @@ export class ProfileComponent implements OnInit {
   }
 
   getCarouselItems() {
-    if (this.pageWidth < 500) return this.carouselElements.slice(0, 1);
-    if (this.pageWidth < 720) return this.carouselElements.slice(0, 2);
+    if (this.pageWidth <= 500) return this.carouselElements.slice(0, 1);
+    if (this.pageWidth <= 720) return this.carouselElements.slice(0, 2);
 
     return this.carouselElements.slice(0, 3);
   }
