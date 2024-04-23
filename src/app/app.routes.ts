@@ -6,7 +6,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 export const routes: Routes = [
     {
         component: ProfileComponent,
-        path:'profile'
+        path:''
     },
     {
         path:'profiles2',
